@@ -1,0 +1,144 @@
+autostart = False
+version = 0.8.3
+[127.0.0.1:7200]
+    workingdir = C:\Users\asus\AppData\Local\Temp
+    udp = 10000
+    [[3640]]
+        image = D:\ccnp\C3640-IK.BIN
+        idlepc = 0x605a5ff4
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R4]]
+        model = 3640
+        console = 4004
+        aux = 2504
+        slot0 = NM-4E
+        e0/0 = R2 e0/1
+        e0/1 = R3 e0/0
+        e0/2 = R5 e1/0
+        x = -16.0
+        y = 121.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3640
+        console = 4001
+        aux = 2501
+        slot0 = NM-4E
+        e0/0 = R2 e0/0
+        e0/1 = R3 e0/1
+        x = -412.0
+        y = -170.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3640
+        console = 4002
+        aux = 2502
+        slot0 = NM-4E
+        e0/0 = R1 e0/0
+        e0/1 = R4 e0/0
+        x = -30.0
+        y = -180.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3640
+        console = 4003
+        aux = 2503
+        slot0 = NM-4E
+        e0/0 = R4 e0/1
+        e0/1 = R1 e0/1
+        x = -420.0
+        y = 124.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\asus\AppData\Local\Temp
+    udp = 10100
+    [[3640]]
+        image = D:\ccnp\C3640-IK.BIN
+        idlepc = 0x605a5ff4
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R5]]
+        model = 3640
+        console = 4005
+        aux = 2505
+        slot1 = NM-4E
+        e1/0 = R4 e0/2
+        x = 274.0
+        y = 127.0
+        z = 1.0
+[GNS3-DATA]
+    m11 = 0.707106781187
+    m22 = 0.707106781187
+    [[NOTE 1]]
+        text = "e1/0"
+        x = -6.99144151095
+        y = 21.1725908653
+        interface = R5 e1/0
+    [[NOTE 2]]
+        text = "e0/2"
+        x = 72.991441511
+        y = 22.8274091347
+        interface = R4 e0/2
+    [[NOTE 3]]
+        text = "e0/1"
+        x = -6.99889721255
+        y = 22.297021514
+        interface = R4 e0/1
+    [[NOTE 4]]
+        text = "e0/0"
+        x = 31.1415440259
+        y = -17.9568034431
+        interface = R4 e0/0
+    [[NOTE 5]]
+        text = "e0/1"
+        x = 34.0880326415
+        y = -17.985199574
+        interface = R3 e0/1
+    [[NOTE 6]]
+        text = "e0/0"
+        x = 72.9988972126
+        y = 21.702978486
+        interface = R3 e0/0
+    [[NOTE 7]]
+        text = "e0/1"
+        x = 34.8584559741
+        y = 61.9568034431
+        interface = R2 e0/1
+    [[NOTE 8]]
+        text = "e0/0"
+        x = -6.98630127563
+        y = 23.0467618135
+        interface = R2 e0/0
+    [[NOTE 9]]
+        text = "e0/1"
+        x = 31.9119673585
+        y = 61.985199574
+        interface = R1 e0/1
+    [[NOTE 10]]
+        text = "e0/0"
+        x = 72.9863012756
+        y = 20.9532381865
+        interface = R1 e0/0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -449.0
+        y = 47.0
+        width = 538.0
+        height = 200.0
+        border_style = 2
+    [[SHAPE 2]]
+        type = ellipse
+        x = -395.0
+        y = -239.0
+        width = 428.0
+        height = 214.0
+        border_style = 2
+    [[SHAPE 3]]
+        type = ellipse
+        x = -530.0
+        y = -345.0
+        width = 666.0
+        height = 667.0
+        border_style = 2
